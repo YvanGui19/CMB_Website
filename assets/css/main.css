@@ -57,8 +57,7 @@ main {
 }
 
 .acc-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 30px;
     align-items: center;
     background-color: var(--color-bg-alter);
@@ -860,23 +859,35 @@ h3 {
 /* Small mobile screens (less/equal than 375px) -------------------------- */
 @media screen and (max-width: 375px) {
 
-/* ACCUEIL 414px ------------- */
+/* ACCUEIL 375px ------------- */
+.acc-container {
+    align-items: center;
+    padding: 30px 5px;
+    min-height: 50vh;
+}
+
 .acc-content {
     align-items: center;
-    padding-right: 0px;
+    padding: 30px 0px;
 }
 
 .acc-content h1 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 
-/* CAROUSEL 414px ------------- */
+/* CAROUSEL 375px ------------- */
 .carousel {
     width: 100%;
 }
 
-/* CONTACT 414px ------------- */
+/* SERVICE 375px ------------- */
+
+.services-container h2 {
+    padding-left: 10px;
+}
+
+/* CONTACT 375px ------------- */
 .contact-form {
     width: 90%;
 }
