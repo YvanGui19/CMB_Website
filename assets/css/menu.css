@@ -1,0 +1,184 @@
+/* ---------------- RESET ---------------- */
+*{margin:0;}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------- COLOR ---------------- */
+:root {
+  --color-bg-main: white;
+  --color-bg-alter: #F2F2F2;
+  --color-text-main: black;
+  --color-text-alter: white;
+  --color-trigger-main: #3977EB;
+  --color-trigger-alter: #0e365d;
+}
+
+/* FONT -------------------------------- */
+@font-face{font-family: 'Montserrat';src: url(../fonts/Montserrat-VariableFont_wght.ttf);}
+@font-face {font-family: 'Raleway'; src: url(../fonts/Raleway-VariableFont_wght.ttf);}
+
+/* ---------------- NAV BARRE ---------------- */
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-main);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    padding: 30px 0px;
+    background-color: var(--color-bg-main);
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.logo-CMB3D {
+  height: 40px;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+#menu a {
+  display: block;
+  padding: 5px 20px;
+  font-family: 'Raleway', arial;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+#menu a.active {
+  text-decoration: underline;
+}
+
+.onglet {
+  color: var(--color-text-main);
+  text-transform: capitalize;
+}
+
+.onglet:hover {
+  background-color: var(--color-trigger-main);
+  color: var(--color-text-alter);
+  transition: all 0.5s ease;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.contact {
+  background-color: var(--color-trigger-main);
+  color: var(--color-text-alter);
+  transition: all 0.5s ease;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+}
+
+.contact:hover {
+  background-color: var(--color-trigger-alter);
+  color: var(--color-text-alter);
+}
+
+/* ---------------- MENU BURGER ---------------- */
+
+/* Cache la checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Bouton burger */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-icon span {
+  height: 4px;
+  background: var(--color-trigger-main);
+  border-radius: 2px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Mobile menu styles */
+@media screen and (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-bg-main);
+    position: absolute;
+    top: 60px; /* ajusté pour dépasser le header */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Affiche le menu quand la checkbox est cochée */
+  #menu-toggle:checked + .menu-icon + #menu {
+    display: flex;
+  }
+
+  /* Affiche le bouton burger */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Animation burger → croix */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Ajuste les liens menu */
+  #menu a {
+    padding: 10px;
+  }
+
+/* Mobile menu styles */
+@media screen and (max-width: 768px) {
+
+}
