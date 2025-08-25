@@ -5,17 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    min-width: 320px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 header {
     width: 100%;
     position: relative;
@@ -139,6 +128,12 @@ header {
 
 /* Mobile menu styles */
 @media screen and (max-width: 768px) {
+
+  .nav-container {
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+
   #menu {
     display: none;
     flex-direction: column;
@@ -177,8 +172,5 @@ header {
   #menu a {
     padding: 10px;
   }
-
-/* Mobile menu styles */
-@media screen and (max-width: 768px) {
 
 }
