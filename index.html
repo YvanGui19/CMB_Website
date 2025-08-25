@@ -194,15 +194,15 @@
                 <div class="contact-form">
                     <h4>Contactez-nous</h4>
                     <h3>Intervention dans toute l'Ile-de-France 24h/24 7j/7</h3>
-                    <form id="contactForm" method="get" action="">
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true">
                         <div class="name-fields">
                             <div class="form-group">
-                                <label for="name">Nom*</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="lastname">Nom*</label>
+                                <input type="text" id="lastname" name="lastname" required>
                             </div>
                             <div class="form-group">
-                                <label for="name">Prénom*</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="firstname">Prénom*</label>
+                                <input type="text" id="firstname" name="firstname" required>
                             </div>
                         </div>
                         
@@ -210,7 +210,16 @@
                         <input type="email" id="email" name="email" required>
                                 
                         <label for="message">Message*</label>
-                        <textarea id="message" name="message" size="250" required></textarea>
+                        <textarea id="message" name="message" maxlength="250" required></textarea>
+
+                        <!-- Champ caché obligatoire pour Netlify -->
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <!-- Champ anti-spam "honeypot" -->
+                        <div style="display:none;">
+                            <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
+                        </div>
+
                     </form>
                     <div class="btnForm">
                         <button type="submit">Envoyer</button>
