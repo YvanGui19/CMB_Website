@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
 
     // FORMULAIRE DE CONTACT
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    /*document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
         alert('Formulaire soumis avec succès !');
-    });
+    });*/
 });
 
 //SOULIGNEMENT DES LIENS DANS LE MENU
