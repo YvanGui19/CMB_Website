@@ -493,6 +493,10 @@ footer ul {
     padding: 0;
 }
 
+footer li {
+    margin-top: 4px;
+}
+
 footer a {
   margin-bottom: 0.5rem;
   text-decoration: none;
@@ -501,6 +505,27 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer a.social-icon {
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer a:not(.social-icon):hover {
+    text-decoration: underline;
+}
+
+footer a.social-icon:hover svg path {
+    fill: var(--color-trigger-alter);
+}
+
+.social-icon {
+    margin-top: 20px;
+}
+
+.linkedin {
+    margin-left: 5px;
 }
 
 
