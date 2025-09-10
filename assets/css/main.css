@@ -917,6 +917,19 @@ h3 {
     width: 90%;
 }
 
+/* FOOTER 375px ------------- */
+footer li {
+    margin-top: 4px;
+}
+
+.social-icon {
+    margin-top: 20px;
+}
+
+.linkedin {
+    margin-left: 5px;
+}
+
 }
 
 
