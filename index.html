@@ -97,7 +97,7 @@
             <input type="checkbox" id="menu-toggle">
 
             <!-- Bouton burger -->
-            <label for="menu-toggle" class="menu-icon">
+            <label for="menu-toggle" class="menu-icon" aria-label="Ouvrir ou fermer le menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -275,6 +275,7 @@
                         <textarea id="message" name="message" maxlength="250" required></textarea>
 
                         <!-- Anti Spam simple-->
+                        <label for="_honey" class="visually-hidden">Laissez ce champ vide</label>
                         <input type="text" name="_honey" style="display:none">
 
                         <!-- Captcha automatique (ça évite la popup de vérif) -->
