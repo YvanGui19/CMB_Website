@@ -249,34 +249,34 @@ h4 {
 
 .carousel-track {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 200%;
-  animation: scroll 30s linear infinite;
+  gap: 40px;
+  width: max-content;
   will-change: transform;
+  animation: scroll var(--speed, 20s) linear infinite;
+}
+
+.carousel-agr .carousel-track { --speed: 15s; }
+.carousel-conf .carousel-track { --speed: 20s; }
+
+.carousel-track::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  background: inherit;
+  animation: inherit;
+}
+
+.carousel-track img {
+    height: 80px;
+    flex: 0 0 auto;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-
-.carousel-track img {
-    height: 80px;
-    margin: 0 20px;
-    flex-shrink: 0;
-    -o-object-fit: contain;
-       object-fit: contain;
-}
-
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
 
 /* PROCESSUS-------------------------------- */
 

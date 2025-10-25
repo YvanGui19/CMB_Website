@@ -43,4 +43,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         });
     });
+    // ================================
+    // CARROUSELS FLUIDES (AGRÉMENTS + CONFIANCE)
+    // ================================
+    document.querySelectorAll('.carousel-track').forEach(track => {
+      if (!track.dataset.duped) {
+        const original = track.innerHTML;
+
+        const numImages = track.querySelectorAll('img').length;
+        if (numImages <= 3) {
+          track.innerHTML = original + original + original + original;
+        } else {
+          track.innerHTML = original + original;
+        }
+
+        track.dataset.duped = 'true';
+      }
+
+      const container = track.closest('.carousel-container');
+      if (container) {
+        container.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
+        container.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
+      }
+    });
 });
