@@ -484,7 +484,7 @@ footer {
 
 footer span {
     text-transform: uppercase;
-    color: var(--color-trigger-main);
+    color: var(--color-text-main);
     font-family: 'Montserrat';
     font-size: 0.8em;
     font-weight: bold;
