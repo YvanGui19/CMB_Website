@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             const targetElement = document.getElementById(targetId);
 
             // Fermer le menu burger si ouvert
-            const menuBtn = document.getElementById('menu-btn');
+            const menuBtn = document.getElementById('menu-toggle');
             if (menuBtn && menuBtn.checked) {
                 menuBtn.checked = false;
             }
@@ -44,27 +44,3 @@ document.addEventListener('DOMContentLoaded', function (event) {
         });
     });
 });
-
-//SOULIGNEMENT DES LIENS DANS LE MENU
- document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".menu a");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navLinks.forEach(link => {
-              link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-            });
-          }
-        });
-      },
-      {
-        threshold: 0.6, // section visible à 60% = active
-      }
-    );
-
-    sections.forEach(section => observer.observe(section));
-  });

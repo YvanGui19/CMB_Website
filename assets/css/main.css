@@ -18,12 +18,12 @@
 .backgr-lightGrey{background: #fafafa;}
 
 /* FONT -------------------------------- */
-@font-face{font-family: 'Montserrat';src: url(../fonts/Montserrat-VariableFont_wght.ttf);}
-@font-face {font-family: 'Raleway'; src: url(../fonts/Raleway-VariableFont_wght.ttf);}
+@font-face{font-family: 'Montserrat';src: url(../fonts/Montserrat-VariableFont_wght.woff2) format('woff2'); font-weight: 100 900; font-display: swap;}
+@font-face {font-family: 'Raleway'; src: url(../fonts/Raleway-VariableFont_wght.woff2) format('woff2'); font-weight: 100 900; font-display: swap;}
 
 html, body {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -50,6 +50,7 @@ main {
 
 /* ACCUEIL -------------------------------- */
 #acc {
+    min-height: 600px;
     display: flex;
     justify-content: center;
     min-height: 50vh;
@@ -57,20 +58,21 @@ main {
 }
 
 .acc-container {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    background-color: var(--color-bg-alter);
-    border-radius: 20px;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 70%;
-    max-height: 600px;
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  background-color: var(--color-bg-alter);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  height: auto;
+  max-height: 600px;
+  overflow: hidden;
 }
 
 .acc-content {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     padding-right: 20px;
     height: 100%;
@@ -95,9 +97,10 @@ h1 {
 }
 
 .acc-img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    height: 500px;
+    object-fit: cover;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -235,35 +238,34 @@ h4 {
 
 .carousel-container::before {
     left: 0;
-    background: linear-gradient(to right, 
-        var(--color-bg-alter) 0%, 
-        rgba(242, 242, 242, 0.9) 10%, 
-        rgba(242, 242, 242, 0.5) 40%, 
-        transparent 100%);
+    background: linear-gradient(to right, var(--color-bg-alter), transparent);
 }
 
 .carousel-container::after {
     right: 0;
-    background: linear-gradient(to left, 
-        var(--color-bg-alter) 0%, 
-        rgba(242, 242, 242, 0.9) 10%, 
-        rgba(242, 242, 242, 0.5) 40%, 
-        transparent 100%);
+    background: linear-gradient(to left, var(--color-bg-alter), transparent);
 }
 
 .carousel-track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-    animation: scroll 40s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200%;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .carousel-track img {
     height: 80px;
     margin: 0 20px;
     flex-shrink: 0;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
     @keyframes scroll {
@@ -299,7 +301,8 @@ h4 {
     box-sizing: border-box;
     background-color: var(--color-bg-main);
     padding: 5px;
-    backdrop-filter: blur(15px); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -342,7 +345,8 @@ h4 {
 }
 
 .process-card img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: auto;
     height: 236px;
     border-top-left-radius: 20px;
@@ -549,7 +553,8 @@ footer a.social-icon:hover svg path {
 }
 
 .acc-img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     order: 2;
     max-height: 300px;
     border-top-right-radius: 0px;
@@ -622,15 +627,10 @@ h1 {
 /* ACCUEIL 980px ------------- */
 .acc-container {
     padding: 5px;
-    min-height: calc(100vh - 120px);
 }
 
 .acc-content {
     padding: 30px 40px;
-}
-    
-h1 {
-    font-size: 1.8em;
 }
 
 /* SERVICE 980px ------------- */
@@ -642,8 +642,6 @@ h1 {
 .contact-form {
     width: 60%;
 }
-
-
 }
 
 
@@ -659,10 +657,6 @@ h1 {
     gap: 15px;
     padding: 15px;
     border-radius: 0px;
-}
-
-h1 {
-    font-size: 1.6em;
 }
 
 .acc-img {
@@ -744,10 +738,6 @@ footer{
     padding: 10px;
     gap: 10px;
 }
-    
-h1 {
-    font-size: 1.4em;
-}
 
 .logo_CMB3D {
     max-width: 150px;
@@ -805,10 +795,6 @@ h1 {
 .acc-container {
     padding: 8px;
     gap: 8px;
-}
-
-h1 {
-    font-size: 1.2em;
 }
 
 .logo_CMB3D {
@@ -931,8 +917,3 @@ footer li {
 }
 
 }
-
-
-
-
-
