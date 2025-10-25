@@ -4,9 +4,10 @@
 /* COLOR -------------------------------- */
 :root {
   --color-bg-main: white;
-  --color-bg-alter: #F2F2F2;
+  --color-bg-alter: #E6E6E6;
   --color-text-main: black;
-  --color-text-alter: white;
+  --color-text-alter: #E6E6E6;
+  --color-text-hover: white;
   --color-trigger-main: #3977EB;
   --color-trigger-alter: #0e365d;
 }
@@ -342,6 +343,7 @@ h4 {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     background-color: var(--color-trigger-alter);
+    color: var(--color-text-hover);
 }
 
 .process-card img {
@@ -453,6 +455,7 @@ h4 {
 
 .btnForm button:hover {
     background: var(--color-trigger-alter);
+    color: var(--color-text-hover);
 }
 
 

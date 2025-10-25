@@ -21,7 +21,12 @@
     <link rel="icon" type="image/ico" href="assets/img/Logo/barata_ss_dot.webp" />
 <!--     TITRE     -->
     <title>Dératisation, Désinsectisation & Désinfection en Île-de-France | CMB3D</title>
+<!--     FONT    -->
+    <link rel="preload" href="assets/fonts/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Raleway-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
 <!--     CSS     -->
+    <link rel="preload" href="assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/menu.css">
 <!--     jQuery      -->
@@ -116,7 +121,7 @@
                     <div class="acc-content">
                         <h1>Expert en Dératisation, Désinsectisation & Désinfection.</h1>
                     </div>
-                    <img class="acc-img" src="assets/img/Photos/Image_accueil_CMB3D.webp" alt="image d'un intervenant de l'entreprise CMB3D durant son travail">
+                    <img class="acc-img" src="assets/img/Photos/Image_accueil_CMB3D.webp" alt="image d'un intervenant de l'entreprise CMB3D durant son travail" fetchpriority="high">
                 </div>
             </section>
             <!---------------------------------- NOS SERVICES ---------------------------------->
@@ -125,17 +130,17 @@
                     <h2>Nos services</h2>
                     <div class="container-cards">
                         <article class="services-card">
-                            <img src="assets/img/icon/rat_bleu_trigger.webp" alt="logo d'un rat">
+                            <img src="assets/img/icon/rat_bleu_trigger.webp" alt="logo d'un rat" loading="lazy">
                             <h3>dératisation</h3>
                             <p>Protégez votre maison contre les rats et souris, grâce à notre expertise en dératisation. Un professionnel certifié s'occupe de l'élimination, vous assurant ainsi un environnement propre et sécurisé.</p>
                         </article>
                         <article class="services-card">
-                            <img src="assets/img/icon/cafard_bleu_trigger.webp" alt="logo d'un cafard">
+                            <img src="assets/img/icon/cafard_bleu_trigger.webp" alt="logo d'un cafard" loading="lazy">
                             <h3>désinsectisation</h3>
                             <p>Éliminer de manière efficace et durable les insectes indésirables, tels que les blattes et les punaises de lit, afin de préserver la propreté et l'hygiène de votre environnement. Grâce à des traitements professionnels adaptés, nous assurons une tranquillité durable, en protégeant votre foyer ou votre lieu de travail contre les infestations récurrentes, pour un quotidien plus serein.</p>
                         </article>
                         <article class="services-card">
-                            <img src="assets/img/icon/bacteries_bleu_trigger.webp" alt="logo d'une bacterie">
+                            <img src="assets/img/icon/bacteries_bleu_trigger.webp" alt="logo d'une bacterie" loading="lazy">
                             <h3>désinfection</h3>
                             <p>Assurer une désinfection efficace et durable pour éliminer bactéries, virus et autres agents pathogènes de vos espaces, qu'ils s'agisse de votre domicile ou de votre lieu de travail. Nos interventions professionnelles visent à assainir en profondeur chaque surface, créant ainsi un environnement sain et sécuritaire pour vous, vos proches ou vos collaborateurs.</p>
                         </article>
@@ -149,22 +154,22 @@
                 <div class="carousel-container">
                     <div class="carousel-track" id="carousel-track">
                     <!-- Logos (doublés pour boucle fluide) -->
-                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise">
-                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie">
-                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide">
+                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise" loading="lazy">
+                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie" loading="lazy">
+                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide" loading="lazy">
 
                     <!-- Doublage pour animation fluide infinie -->
-                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise">
-                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie">
-                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide">
+                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise" loading="lazy">
+                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie" loading="lazy">
+                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide" loading="lazy">
 
-                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise">
-                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie">
-                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide">
+                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise" loading="lazy">
+                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie" loading="lazy">
+                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide" loading="lazy">
 
-                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise">
-                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie">
-                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide">
+                    <img src="assets/img/Agrément/CertiPunaise.webp" alt="Certification CertiPunaise" loading="lazy">
+                    <img src="assets/img/Agrément/Ministère_écologie.webp" alt="Certification Ministère Écologie" loading="lazy">
+                    <img src="assets/img/Agrément/CertiBiocide.webp" alt="Certification CertiBiocide" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -174,42 +179,42 @@
                 <h2>Notre processus</h2>
                 <div class="process-container">
                     <article class="process-card" data-step="1">
-                        <img src="assets/img/Taaft/PdC01.webp" alt="image de la prise de contact via le téléphone, email ou tchat">
+                        <img src="assets/img/Taaft/PdC01.webp" alt="image de la prise de contact via le téléphone, email ou tchat" loading="lazy">
                         <div class="card-content">
                             <h3>Prise de contact</h3>
                             <p>Contactez-nous et décrivez votre problème pour que nous puissions organiser une intervention adaptée.</p>
                         </div>
                     </article>
                     <article class="process-card" data-step="2">
-                        <img src="assets/img/Taaft/IdL02.webp" alt="image d'une inspection des lieux par un technicien CMB3D dans le domicile d'un particulier">
+                        <img src="assets/img/Taaft/IdL02.webp" alt="image d'une inspection des lieux par un technicien CMB3D dans le domicile d'un particulier" loading="lazy">
                         <div class="card-content">
                             <h3>Inspection des lieux</h3>
                             <p>Un technicien se déplace à votre domicile ou local professionnel pour évaluer l'infestation.</p>
                         </div> 
                     </article>
                     <article class="process-card" data-step="3">
-                        <img src="assets/img/Taaft/Diag03.webp" alt="image d'un employé CMB3D remplissant un document de Diagnostic">
+                        <img src="assets/img/Taaft/Diag03.webp" alt="image d'un employé CMB3D remplissant un document de Diagnostic" loading="lazy">
                         <div class="card-content">
                             <h3>Diagnostic et choix du traitement</h3>
                             <p>La méthode de traitement la plus efficace est définit selon le type et le niveau d'infestation.</p>
                         </div>
                     </article>
                     <article class="process-card" data-step="4">
-                        <img src="assets/img/Taaft/AdT02.webp" alt="image d'application d'un traitement">
+                        <img src="assets/img/Taaft/AdT02.webp" alt="image d'application d'un traitement" loading="lazy">
                         <div class="card-content">
                             <h3>Application du traitement</h3>
                             <p>Le traitement professionnel et adéquat est appliqué dans les zones infestées, en toute sécurité.</p>
                         </div>
                     </article>
                     <article class="process-card" data-step="5">
-                        <img src="assets/img/Taaft/Suivi02.webp" alt="image d'un rendez-vous entre CMB3D et un client">
+                        <img src="assets/img/Taaft/Suivi02.webp" alt="image d'un rendez-vous entre CMB3D et un client" loading="lazy">
                         <div class="card-content">
                             <h3>Suivi et prévention</h3>
                             <p>Nous restons à votre écoute après l'intervention et vous conseillons pour éviter toute nouvelle infestation.</p>
                         </div>
                     </article>
                     <article class="process-card" data-step="6">
-                        <img src="assets/img/Taaft/Suivi01.webp" alt="image d'un client faisant un retour à un employé CMB3D">
+                        <img src="assets/img/Taaft/Suivi01.webp" alt="image d'un client faisant un retour à un employé CMB3D" loading="lazy">
                         <div class="card-content">
                             <h3>Enquête de satisfaction</h3>
                             <p>Partagez votre expérience pour nous aider à progresser.</p>
@@ -224,24 +229,24 @@
                 <div class="carousel-container">
                     <div class="carousel-track" id="carousel-track">
                     <!-- Logos (doublés pour boucle fluide) -->
-                    <img src="assets/img/Entreprises/Logo_alstom.webp" alt="Logo alstom">
-                    <img src="assets/img/Entreprises/Logo_dior.webp" alt="Logo dior">
-                    <img src="assets/img/Entreprises/Logo_amundi.webp" alt="Logo amundi">
-                    <img src="assets/img/Entreprises/Logo_MENJ.webp" alt="Logo Ministère de l'éducation nationale et de la jeunesse">
-                    <img src="assets/img/Entreprises/Logo_MESR.webp" alt="Logo Ministère de l'enseignement supérieur et de la recherche">
-                    <img src="assets/img/Entreprises/Logo_edenred.webp" alt="Logo edenred">
-                    <img src="assets/img/Entreprises/Logo_pfizer.webp" alt="Logo pfizer">
-                    <img src="assets/img/Entreprises/Logo_intersport.webp" alt="Logo intersport">
+                    <img src="assets/img/Entreprises/Logo_alstom.webp" alt="Logo alstom" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_dior.webp" alt="Logo dior" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_amundi.webp" alt="Logo amundi" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_MENJ.webp" alt="Logo Ministère de l'éducation nationale et de la jeunesse" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_MESR.webp" alt="Logo Ministère de l'enseignement supérieur et de la recherche" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_edenred.webp" alt="Logo edenred" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_pfizer.webp" alt="Logo pfizer" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_intersport.webp" alt="Logo intersport" loading="lazy">
 
                     <!-- Doublage pour animation fluide infinie -->
-                    <img src="assets/img/Entreprises/Logo_alstom.webp" alt="Logo alstom">
-                    <img src="assets/img/Entreprises/Logo_dior.webp" alt="Logo dior">
-                    <img src="assets/img/Entreprises/Logo_amundi.webp" alt="Logo amundi">
-                    <img src="assets/img/Entreprises/Logo_MENJ.webp" alt="Logo Ministère de l'éducation nationale et de la jeunesse">
-                    <img src="assets/img/Entreprises/Logo_MESR.webp" alt="Logo Ministère de l'enseignement supérieur et de la recherche">
-                    <img src="assets/img/Entreprises/Logo_edenred.webp" alt="Logo edenred">
-                    <img src="assets/img/Entreprises/Logo_pfizer.webp" alt="Logo pfizer">
-                    <img src="assets/img/Entreprises/Logo_intersport.webp" alt="Logo intersport">
+                    <img src="assets/img/Entreprises/Logo_alstom.webp" alt="Logo alstom" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_dior.webp" alt="Logo dior" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_amundi.webp" alt="Logo amundi" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_MENJ.webp" alt="Logo Ministère de l'éducation nationale et de la jeunesse" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_MESR.webp" alt="Logo Ministère de l'enseignement supérieur et de la recherche" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_edenred.webp" alt="Logo edenred" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_pfizer.webp" alt="Logo pfizer" loading="lazy">
+                    <img src="assets/img/Entreprises/Logo_intersport.webp" alt="Logo intersport" loading="lazy">
                     </div>
                 </div>
             </section>
