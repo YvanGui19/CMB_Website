@@ -419,8 +419,7 @@ h4 {
   position: relative;
   background-color: var(--color-bg-alter);
   border-radius: 20px;
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1),
-    -6px -6px 12px rgba(255, 255, 255, 0.8);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form h3 {

@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (this.checked) {
       // Si la checkbox est cochée :
       firstnameField.removeAttribute("required");
-      firstnameLabel.textContent = "Prénom"; // On retire l'étoile
+      firstnameLabel.textContent = "Prénom";
       companyNameField.style.display = "block";
       document
         .getElementById("companyName")
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     } else {
       // Si la checkbox n'est pas cochée :
       firstnameField.setAttribute("required", "required");
-      firstnameLabel.textContent = "Prénom*"; // On remet l'étoile
+      firstnameLabel.textContent = "Prénom*";
       companyNameField.style.display = "none";
       document.getElementById("companyName").removeAttribute("required");
     }
