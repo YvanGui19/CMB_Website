@@ -1,69 +1,100 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-    console.log('load');
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("load");
 
-    // DÉROULEMENT DES SECTIONS VIA LE MENU
-    document.querySelectorAll('a[href^="#"]').forEach($anchor => {
-        $anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+  // DÉROULEMENT DES SECTIONS VIA LE MENU
+  document.querySelectorAll('a[href^="#"]').forEach(($anchor) => {
+    $anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
 
-            // Fermer le menu burger si ouvert
-            const menuBtn = document.getElementById('menu-toggle');
-            if (menuBtn && menuBtn.checked) {
-                menuBtn.checked = false;
-            }
+      // Fermer le menu burger si ouvert
+      const menuBtn = document.getElementById("menu-toggle");
+      if (menuBtn && menuBtn.checked) {
+        menuBtn.checked = false;
+      }
 
-            // Calculer la position avec offset pour la navigation
-            const navHeight = 80; // Hauteur de la navigation
-            const targetPosition = targetElement.offsetTop - navHeight;
+      // Calculer la position avec offset pour la navigation
+      const navHeight = 80; // Hauteur de la navigation
+      const targetPosition = targetElement.offsetTop - navHeight;
 
-            // Pour la section accueil, aller directement au top
-            if (targetId === 'acc') {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            } 
-            // Pour la section contact, ajuster l'offset
-            else if (targetId === 'contact') {
-                const contactPosition = targetElement.offsetTop - 40; // Offset plus important
-                window.scrollTo({
-                    top: contactPosition,
-                    behavior: 'smooth'
-                });
-            } 
-            // Pour les autres sections, utiliser l'offset normal
-            else {
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+      // Pour la section accueil, aller directement au top
+      if (targetId === "acc") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
-    });
-    // ================================
-    // CARROUSELS FLUIDES (AGRÉMENTS + CONFIANCE)
-    // ================================
-    document.querySelectorAll('.carousel-track').forEach(track => {
-      if (!track.dataset.duped) {
-        const original = track.innerHTML;
-
-        const numImages = track.querySelectorAll('img').length;
-        if (numImages <= 3) {
-          track.innerHTML = original + original + original + original;
-        } else {
-          track.innerHTML = original + original;
-        }
-
-        track.dataset.duped = 'true';
       }
-
-      const container = track.closest('.carousel-container');
-      if (container) {
-        container.addEventListener('mouseenter', () => { track.style.animationPlayState = 'paused'; });
-        container.addEventListener('mouseleave', () => { track.style.animationPlayState = 'running'; });
+      // Pour la section contact, ajuster l'offset
+      else if (targetId === "contact") {
+        const contactPosition = targetElement.offsetTop - 40; // Offset plus important
+        window.scrollTo({
+          top: contactPosition,
+          behavior: "smooth",
+        });
+      }
+      // Pour les autres sections, utiliser l'offset normal
+      else {
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
       }
     });
+  });
+  // ================================
+  // CARROUSELS FLUIDES (AGRÉMENTS + CONFIANCE)
+  // ================================
+  document.querySelectorAll(".carousel-track").forEach((track) => {
+    if (!track.dataset.duped) {
+      const original = track.innerHTML;
+
+      const numImages = track.querySelectorAll("img").length;
+      if (numImages <= 3) {
+        track.innerHTML = original + original + original + original;
+      } else {
+        track.innerHTML = original + original;
+      }
+
+      track.dataset.duped = "true";
+    }
+
+    const container = track.closest(".carousel-container");
+    if (container) {
+      container.addEventListener("mouseenter", () => {
+        track.style.animationPlayState = "paused";
+      });
+      container.addEventListener("mouseleave", () => {
+        track.style.animationPlayState = "running";
+      });
+    }
+  });
+
+  // ================================
+  // CONTACT INPUT ENTREPRISE
+  // ================================
+
+  const isCompanyCheckbox = document.getElementById("isCompany");
+  const firstnameField = document.getElementById("firstname");
+  const firstnameLabel = document.getElementById("firstnameLabel");
+  const companyNameField = document.querySelector(".company-name-field");
+
+  isCompanyCheckbox.addEventListener("change", function () {
+    if (this.checked) {
+      // Si la checkbox est cochée :
+      firstnameField.removeAttribute("required");
+      firstnameLabel.textContent = "Prénom"; // On retire l'étoile
+      companyNameField.style.display = "block";
+      document
+        .getElementById("companyName")
+        .setAttribute("required", "required");
+    } else {
+      // Si la checkbox n'est pas cochée :
+      firstnameField.setAttribute("required", "required");
+      firstnameLabel.textContent = "Prénom*"; // On remet l'étoile
+      companyNameField.style.display = "none";
+      document.getElementById("companyName").removeAttribute("required");
+    }
+  });
 });
